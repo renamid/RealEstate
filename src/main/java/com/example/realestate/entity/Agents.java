@@ -1,6 +1,6 @@
 package com.example.realestate.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 @Entity
 @Table(name = "agents")
 public class Agents {
@@ -8,21 +8,22 @@ public class Agents {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "email" ,nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = false)
+    @Column(name = "phone",nullable = false, unique = true)
     private String phone;
 
-    @Column(nullable = false)
+    @Column(name = "experience", nullable = false)
     private Integer experience;
 
+    @Column(name = "education", nullable = false)
     private String education;
 
-    @Column(nullable = false)
+    @Column(name = "salary", nullable = false)
     private Double salary;
 
     // constructors, getters, setters, toString

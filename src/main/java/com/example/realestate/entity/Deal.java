@@ -1,10 +1,10 @@
 package com.example.realestate.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "deal")
+@Table(name = "purchases")
 public class Deal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
