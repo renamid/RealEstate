@@ -35,5 +35,5 @@ public class Listing {
     @Column(name = "user_id")
     private Long userId;
 
-    // constructors, getters and setters
+    // constructors
 }

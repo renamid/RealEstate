@@ -3,10 +3,12 @@ package com.example.realestate.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Getter
 @Setter
+@ToString
 @Table(name = "agents")
 public class Agents {
     @Id
@@ -29,7 +31,7 @@ public class Agents {
     private String education;
 
     @Column(name = "salary", nullable = false)
-    private Double salary;
+    private Float salary;
 
-    // constructors, getters, setters, toString
+    // constructors
 }

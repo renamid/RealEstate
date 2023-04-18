@@ -41,6 +41,6 @@ public class Objects {
     @Column(name = "date_added")
     private Date dateAdded;
 
-    // Конструкторы, геттеры и сеттеры
+    // Конструкторы
 
 }

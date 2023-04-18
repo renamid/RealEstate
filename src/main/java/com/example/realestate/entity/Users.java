@@ -35,5 +35,5 @@ public class Users {
     @Column(name = "preferences", nullable = false)
     private String preferences;
 
-    // constructors, getters and setters
+    // constructors
 }
