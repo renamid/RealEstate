@@ -30,7 +30,7 @@ public class ObjectsService {
     }
 
     public ObjectsDTO update(Long id, ObjectsDTO dto) {
-        Objects objects = objectsRepository.findById(id).orElseThrow(() -> new EntityNotFoundException(" not found with id:" + id));
+        Objects objects = objectsRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Object not found with id:" + id));
         //внос новых данных objects.set***(dto.get***());
         objects = objectsRepository.save(objects);//save in BD
 
@@ -38,7 +38,7 @@ public class ObjectsService {
     }
 
     public void delete(Long id) {
-        Objects objects = objectsRepository.findById(id).orElseThrow(() -> new EntityNotFoundException(" not found with id:" + id));
+        Objects objects = objectsRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Object not found with id:" + id));
         objectsRepository.delete(objects);
     }
 }

@@ -6,17 +6,18 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AgentsDTO {
-    private Long id;
+    private long id;
     private String name;
     private String email;
     private String phone;
-    private Integer experience;
+    private int experience;
     private String education;
-    private Float salary;
+    private float salary;
 
     public static AgentsDTO fromEntity(Agents agents) {
         AgentsDTO dto = new AgentsDTO();
         dto.setId(agents.getId());
+        dto.setName(agents.getName());
 
         return dto;
     }

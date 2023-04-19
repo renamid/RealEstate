@@ -15,20 +15,20 @@ public class Purchases {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "object_id", nullable = false)
+    @Column(name = "object_id"/*, nullable = false*/)
     private Long objectId;
 
-    @Column(name = "user_id", nullable = false)
+    @Column(name = "user_id"/*, nullable = false*/)
     private Long userId;
 
-    @Column(name = "agent_id", nullable = false)
+    @Column(name = "agent_id"/*, nullable = false*/)
     private Long agentId;
 
-    @Column(name = "price", nullable = false)
+    @Column(name = "price"/*, nullable = false*/)
     private Double price;
 
-    @Column(name = "date", nullable = false)
+    @Column(name = "date"/*, nullable = false*/)
     private LocalDate date;
 
-    // Конструкторы, геттеры и сеттеры
+    // Конструкторы
 }

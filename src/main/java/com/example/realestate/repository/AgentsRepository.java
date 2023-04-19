@@ -9,5 +9,8 @@ import java.util.Optional;
 @Repository
 public interface AgentsRepository extends JpaRepository<Agents, Long> {
     Optional<Agents> findByEmail(String email);
+
+    Optional<Agents> findById(Long Id);
+
     List<Agents> findAllByExperienceGreaterThanEqual(Integer experience);
 }

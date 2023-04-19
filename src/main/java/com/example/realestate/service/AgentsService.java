@@ -23,12 +23,12 @@ public class AgentsService {
         return AgentsDTO.fromEntity(agents);
     }
 
-    public AgentsDTO findById(Long id) {
+    public AgentsDTO findById(long id) {
         Agents agents = agentsRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Agents not found with id:" + id));
         return AgentsDTO.fromEntity(agents);
     }
 
-    public AgentsDTO update(Long id, AgentsDTO dto) {
+    public AgentsDTO update(long id, AgentsDTO dto) {
         Agents agents = agentsRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Agents not found with id:" + id));
         //внос новых данных agents.set***(dto.get***());
 
@@ -37,7 +37,7 @@ public class AgentsService {
         return AgentsDTO.fromEntity(agents);
     }
 
-    public void delete(Long id) {
+    public void delete(long id) {
         Agents agents = agentsRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Agents not found with id:" + id));
         agentsRepository.delete(agents);
     }
