@@ -25,7 +25,14 @@ public class ObjectsController {
     public ObjectsDTO findById(@PathVariable long id) {
         return objectsService.findById(id);
     }
-
+    @PostMapping
+    public ObjectsDTO createObjects(@RequestBody ObjectsDTO objectsDTO) {
+        return objectsService.create(objectsDTO);
+    }
+    @PutMapping("/{id}")
+    public ObjectsDTO updateObjects(@PathVariable long id, @RequestBody ObjectsDTO objectsDTO) {
+        return objectsService.update(id, objectsDTO);
+    }
     @DeleteMapping("/{id}")
     public void delete(@PathVariable long id) {
         objectsService.delete(id);

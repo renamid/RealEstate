@@ -14,7 +14,7 @@ public class ListingsService {
         this.listingRepository = listingRepository;
     }
 
-    public ListingDTO create(Listing dto){
+    public ListingDTO create(ListingDTO dto){
         Listing listing = new Listing();
         //создание агента по параметрам
         listing = listingRepository.save(listing);
