@@ -3,8 +3,6 @@ package com.example.realestate.dto;
 import com.example.realestate.entity.Agents;
 import lombok.Getter;
 import lombok.Setter;
-
-
 @Getter
 @Setter
 public class AgentsDTO {

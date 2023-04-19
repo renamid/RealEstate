@@ -22,7 +22,7 @@ public class PurchasesService {
         return PurchasesDTO.fromEntity(purchases);
     }
 
-    public PurchasesDTO findByID(Long id){
+    public PurchasesDTO findById(Long id){
         Purchases purchases = purchasesRepository.findById(id).orElseThrow(()->new EntityNotFoundException("Purchas not found with id:" + id));
 
         return  PurchasesDTO.fromEntity(purchases);
